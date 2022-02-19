@@ -47,4 +47,9 @@ document.getElementById('save-btn').addEventListener('click',function(){
   const resultSaveAmo = saveAmount.innerText = percentResult;
   const remainResult = balanceOutput.innerText - resultSaveAmo;
   remainingAmount.innerText = remainResult;
+  
+  // If
+  if(balanceOutput.innerText < saveAmount.innerText){
+    alert('You not have enought money to save');
+  }
 })
