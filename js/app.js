@@ -7,6 +7,9 @@
 
 document.getElementById('calculate-btn').addEventListener('click',function(){
   const tootalCost = parseFloat(foodOutput.value) + parseFloat(rentOutput.value) + parseFloat(clothOutput.value);
+  if(incomeOutput.value == ''){
+    alert('Your income please')
+  }
   if(foodOutput.value == '' || rentOutput.value == '' ||clothOutput.value == ''){
     return alert('Sorry Please fill up')
   }
