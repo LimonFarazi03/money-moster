@@ -4,6 +4,11 @@
   const clothOutput = document.getElementById('cloth-output');
   const totalExpeOutput = document.getElementById('total-expeOutput');
   const balanceOutput = document.getElementById('balance-output');
+  // 2nd Cal
+  const saveOutput = document.getElementById('save-output');
+  const saveAmount = document.getElementById('save-amount');
+  const remainingAmount = document.getElementById('remain-amount');
+
 
 document.getElementById('calculate-btn').addEventListener('click',function(){
   const tootalCost =
@@ -25,7 +30,6 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
   else if( incomeOutput.value < 0 || foodOutput.value < 0 || rentOutput.value < 0 || clothOutput.value < 0){
     const errorMessage = document.getElementById('error-msg');
     errorMessage.style.display = 'block';
-    return
   }
   else if(foodOutput.value > 0 || rentOutput.value > 0 || clothOutput.value > 0){
     const errorMessage = document.getElementById('error-msg');
@@ -36,3 +40,11 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
   const haveMoney = incomeOutput.value - totalExp;
   balanceOutput.innerText = haveMoney;
 });
+// SaveAmount Section
+document.getElementById('save-btn').addEventListener('click',function(){
+  const percent = incomeOutput.value * saveOutput.value  ;
+  const percentResult = percent / 100
+  const resultSaveAmo = saveAmount.innerText = percentResult;
+  const remainResult = balanceOutput.innerText - resultSaveAmo;
+  remainingAmount.innerText = remainResult;
+})
