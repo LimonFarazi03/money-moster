@@ -6,7 +6,8 @@
   const balanceOutput = document.getElementById('balance-output');
 
 document.getElementById('calculate-btn').addEventListener('click',function(){
-  const tootalCost = parseFloat(foodOutput.value) + parseFloat(rentOutput.value) + parseFloat(clothOutput.value);
+  const tootalCost =
+  parseFloat(foodOutput.value) + parseFloat(rentOutput.value) + parseFloat(clothOutput.value);
 
   if(incomeOutput.value == ''){
     return alert('Your income please')
@@ -14,7 +15,7 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     return alert('Areah! baba negative number jibone income korso')
   }else if(foodOutput.value == ''){
     alert('Please fill up Food Field')
-  }else if(rentOutput.value = ''){
+  }else if(rentOutput.value == ''){
     alert('Please fill up Rent Field')
   }else if(clothOutput.value == ''){
     alert('Please fill up Cloth Field')
