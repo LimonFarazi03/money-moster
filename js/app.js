@@ -11,17 +11,18 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
   // Condition
   if(incomeOutput.value == ''){
     return alert('Your income please')
-  }else if(incomeOutput.value < 0){
-    return alert('Areah! baba negative number jibone income korso')
   }else if(foodOutput.value == ''){
-    alert('Please fill up Food Field')
+    alert('Please fill up Food Field');
+    return;
   }else if(rentOutput.value == ''){
-    alert('Please fill up Rent Field')
+    alert('Please fill up Rent Field');
+    return
   }else if(clothOutput.value == ''){
-    alert('Please fill up Cloth Field')
+    alert('Please fill up Cloth Field');
+    return
   }
   // Error Massage
-  else if(foodOutput.value <0 || rentOutput.value < 0 || clothOutput.value < 0){
+  else if( incomeOutput.value < 0 || foodOutput.value < 0 || rentOutput.value < 0 || clothOutput.value < 0){
     const errorMessage = document.getElementById('error-msg');
     errorMessage.style.display = 'block';
     return
